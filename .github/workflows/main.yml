@@ -1,0 +1,17 @@
+name: Commit Logger
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch: # Permet activació manual
+
+jobs:
+  log-commits:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Say hello
+        run: |
+            echo "----- Hola Mundo -------"
